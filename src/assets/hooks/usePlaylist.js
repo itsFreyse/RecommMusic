@@ -14,7 +14,7 @@ function usePlaylists(userId) {
     setError(null);
     try {
       const response = await axios.get(
-        `https://back-playlist-sd.onrender.com/usuarios/${userId}/playlists`
+        `https://backplaylistsd-production.up.railway.app/usuarios/${userId}/playlists`
       );
       // Aplanar los datos si vienen como un array de arrays
       const flattenedData = response.data.data.flat();
@@ -31,7 +31,7 @@ function usePlaylists(userId) {
   const addPlaylist = async (newPlaylist) => {
     try {
       const response = await axios.post(
-        `https://back-playlist-sd.onrender.com/usuarios/${userId}/playlists`,
+        `https://backplaylistsd-production.up.railway.app/usuarios/${userId}/playlists`,
         {
           titulo: newPlaylist.titulo,
           generos: newPlaylist.generos,
@@ -49,7 +49,7 @@ function usePlaylists(userId) {
   const updatePlaylist = async (updatedPlaylist) => {
     try {
       await axios.put(
-        `https://back-playlist-sd.onrender.com/usuarios/${userId}/playlists/${updatedPlaylist.id}`,
+        `https://backplaylistsd-production.up.railway.app/usuarios/${userId}/playlists/${updatedPlaylist.id}`,
         {
           titulo: updatedPlaylist.titulo,
           generos: updatedPlaylist.generos,
@@ -68,7 +68,7 @@ function usePlaylists(userId) {
   const deletePlaylist = async (playlistId) => {
     try {
       await axios.delete(
-        `https://back-playlist-sd.onrender.com/usuarios/${userId}/playlists/${playlistId}`
+        `https://backplaylistsd-production.up.railway.app/usuarios/${userId}/playlists/${playlistId}`
       );
       setPlaylists((prev) => prev.filter((pl) => pl.id !== playlistId));
     } catch (err) {

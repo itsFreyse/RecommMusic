@@ -20,7 +20,7 @@ function useSongs(playlistId) {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://back-playlist-sd.onrender.com/playlists/${playlistId}/canciones`
+          `https://backplaylistsd-production.up.railway.app/playlists/${playlistId}/canciones`
         );
         setSongs(response.data.data);
       } catch (err) {
@@ -56,7 +56,7 @@ function useSongs(playlistId) {
 
       // Enviar la canción a la playlist seleccionada
       await axios.post(
-        `https://back-playlist-sd.onrender.com/playlists/${playlistId}/canciones`,
+        `https://backplaylistsd-production.up.railway.app/playlists/${playlistId}/canciones`,
         {
           nombre: track.name,
           artista: artistNames,
@@ -86,7 +86,7 @@ function useSongs(playlistId) {
     try {
       // Llamamos al endpoint para eliminar la canción de la playlist
       await axios.delete(
-        `https://back-playlist-sd.onrender.com/playlists/${playlistId}/canciones/${trackId}`
+        `https://backplaylistsd-production.up.railway.app/playlists/${playlistId}/canciones/${trackId}`
       );
 
       // Actualizamos la lista de canciones después de la eliminación

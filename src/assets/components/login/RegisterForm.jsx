@@ -34,7 +34,7 @@ function RegisterForm({ setActiveTab }) {
 
     try {
       const response = await axios.post(
-        "https://back-playlist-sd.onrender.com/usuarios",
+        "https://backplaylistsd-production.up.railway.app/usuarios",
         {
           nombre: formData.name,
           correo: formData.email,
