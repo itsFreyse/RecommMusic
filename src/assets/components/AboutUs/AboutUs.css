@@ -1,0 +1,69 @@
+.about-us {
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #0e0e0e;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    color: #380563;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-us-subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.developers {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.developer-section {
+    flex: 1;
+    text-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.developer-role {
+    font-size: 1.5rem;
+    color: #380563;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #380563;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.developer {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-us-description {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.about-us-description p {
+    margin: 0;
+    color: #555;
+    text-align: justify;
+    font-size: 1.3rem;
+}

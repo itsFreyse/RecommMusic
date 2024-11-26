@@ -6,6 +6,7 @@ import NavegationBar from "./assets/components/navBar/NavBar.jsx";
 import PlaylistsPrincipal from "./assets/components/playlist/PlaylistPrincipal.jsx";
 import RecommendedTracks from "./assets/components/listSongs/RecommendedTraks.jsx";
 import SearchBar from "./assets/components/searchBar/SearchBar.jsx";
+import AboutUs from "./assets/components/AboutUs/AboutUs.jsx";
 // Importamos el servicio
 import getSpotifyToken from "./assets/services/spotify.js";
 
@@ -38,6 +39,7 @@ function App() {
             }
           />
           <Route path="/user-playlists" element={<PlaylistsPrincipal />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </Container>
     </BrowserRouter>

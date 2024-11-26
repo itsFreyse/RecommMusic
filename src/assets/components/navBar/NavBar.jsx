@@ -1,16 +1,12 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
-// Context
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-// Importamos los componentes necesarios
 import LoginModal from "../login/LoginModal";
-// Importamos el logo
 import logo4ases from "../../img/icono4ases.png";
-// Estilos de este componente
 import "./NavBar.css";
 
-// Nav del sitio web 
 function NavigatorBar() {
   const { user, login, logout } = useAuth();
   const [showModal, setShowModal] = useState(false);
@@ -26,43 +22,40 @@ function NavigatorBar() {
   return (
     <header>
       <div className="logo">
-        <a href="/">
+        <Link to="/">
           <img id="logo" src={logo4ases} alt="Poker-logo" />
           Recomm Music
-        </a>
+        </Link>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="/" className="nav-link">
+            <Link to="/" className="nav-link">
               Canciones Recomendadas
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/user-playlists"
+            <Link
+              to="/user-playlists"
               className={`nav-link ${!user ? "disabled-link" : ""}`}
               onClick={(e) => {
                 if (!user) e.preventDefault();
               }}
             >
               PlayList
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <Link to="/about-us" className="nav-link">
               About Us
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
       <div className="login-button">
         {user ? (
           <Dropdown>
-            <Dropdown.Toggle 
-              variant="outline-light" 
-              active={user}
-            >
+            <Dropdown.Toggle variant="outline-light" active={user}>
               {user.name}
             </Dropdown.Toggle>
             <Dropdown.Menu>
